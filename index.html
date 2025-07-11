@@ -1,0 +1,108 @@
+{"version_uuid":"20212725-a557-421d-b392-32f38fcc777d","command":"create","type":"text/html","id":"symbionet_website","title":"SimbioNet Alex AIGemini - Сайт проекта","content":"<!DOCTYPE html>
+
+<html lang="ru"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>SimbioNet Alex AIGemini - Симбиоз человека и ИИ</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+        font-family: 'Arial', sans-serif;\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            min-height: 100vh;\n            color: white;\n            overflow-x: hidden;\n        }\n\n        /* Анимированный фон */
+    .bg-animation {\n            position: fixed;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            z-index: -1;\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n        }\n\n        .bg-animation::before {\n            content: '';\n            position: absolute;\n            top: 0;\n            left: 0;\n            width: 100%;\n            height: 100%;\n            background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%),\n                        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 70%),\n                        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);\n            animation: pulse 4s ease-in-out infinite alternate;\n        }\n\n        @keyframes pulse {\n            0% { opacity: 0.5; }\n            100% { opacity: 1; }
+    }
+
+    /* Навигация */
+    nav {\n            position: fixed;\n            top: 0;\n            width: 100%;\n            background: rgba(0, 0, 0, 0.2);\n            backdrop-filter: blur(10px);\n            z-index: 1000;\n            padding: 1rem 0;\n            transition: all 0.3s ease;\n        }\n\n        nav.scrolled {\n            background: rgba(0, 0, 0, 0.8);\n        }\n\n        .nav-container {\n            max-width: 1200px;\n            margin: 0 auto;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            padding: 0 2rem;\n        }\n\n        .logo {\n            font-size: 1.8rem;\n            font-weight: bold;\n            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n        }\n\n        .nav-links {\n            display: flex;\n            list-style: none;\n            gap: 2rem;\n        }\n\n        .nav-links a {\n            color: white;\n            text-decoration: none;\n            transition: all 0.3s ease;\n            padding: 0.5rem 1rem;\n            border-radius: 25px;\n        }\n\n        .nav-links a:hover {\n            background: rgba(255, 255, 255, 0.1);\n            transform: translateY(-2px);
+    }
+
+    /* Главная секция */
+    .hero {\n            height: 100vh;\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            text-align: center;\n            position: relative;\n        }\n\n        .hero-content {\n            max-width: 800px;\n            padding: 2rem;\n            animation: fadeInUp 1s ease-out;\n        }\n\n        @keyframes fadeInUp {\n            from {\n                opacity: 0;\n                transform: translateY(50px);\n            }\n            to {\n                opacity: 1;\n                transform: translateY(0);\n            }\n        }\n\n        .hero h1 {\n            font-size: 3.5rem;\n            margin-bottom: 1rem;\n            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n            animation: gradient 3s ease infinite;\n        }\n\n        @keyframes gradient {\n            0%, 100% { background-position: 0% 50%; }\n            50% { background-position: 100% 50%; }\n        }\n\n        .hero p {\n            font-size: 1.3rem;\n            margin-bottom: 2rem;\n            opacity: 0.9;\n            line-height: 1.6;\n        }\n\n        .cta-button {\n            display: inline-block;\n            padding: 1rem 2rem;\n            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);\n            color: white;\n            text-decoration: none;\n            border-radius: 50px;\n            font-weight: bold;\n            transition: all 0.3s ease;\n            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);\n        }\n\n        .cta-button:hover {\n            transform: translateY(-3px);\n            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Секции контента */
+    .section {\n            padding: 5rem 0;\n            max-width: 1200px;\n            margin: 0 auto;\n        }\n\n        .section-title {\n            text-align: center;\n            font-size: 2.5rem;\n            margin-bottom: 3rem;\n            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);\n            -webkit-background-clip: text;\n            -webkit-text-fill-color: transparent;\n            background-clip: text;\n        }\n\n        .features {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n            gap: 2rem;\n            padding: 0 2rem;\n        }\n\n        .feature-card {\n            background: rgba(255, 255, 255, 0.1);\n            backdrop-filter: blur(10px);\n            border-radius: 20px;\n            padding: 2rem;\n            text-align: center;\n            transition: all 0.3s ease;\n            border: 1px solid rgba(255, 255, 255, 0.2);\n        }\n\n        .feature-card:hover {\n            transform: translateY(-10px);\n            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);\n        }\n\n        .feature-icon {\n            font-size: 3rem;\n            margin-bottom: 1rem;\n        }\n\n        .feature-card h3 {\n            margin-bottom: 1rem;\n            font-size: 1.5rem;\n        }\n\n        /* Чат секция */
+    .chat-section {\n            background: rgba(0, 0, 0, 0.2);\n            backdrop-filter: blur(10px);\n            border-radius: 20px;\n            margin: 2rem;\n            padding: 2rem;\n        }\n\n        .chat-container {\n            max-width: 800px;\n            margin: 0 auto;\n        }\n\n        .chat-messages {\n            height: 400px;\n            overflow-y: auto;\n            background: rgba(255, 255, 255, 0.1);\n            border-radius: 15px;\n            padding: 1rem;\n            margin-bottom: 1rem;\n            border: 1px solid rgba(255, 255, 255, 0.2);\n        }\n\n        .message {\n            margin-bottom: 1rem;\n            padding: 0.8rem;\n            border-radius: 10px;\n            animation: slideIn 0.3s ease;\n        }\n\n        @keyframes slideIn {\n            from {\n                opacity: 0;\n                transform: translateX(-20px);\n            }\n            to {\n                opacity: 1;\n                transform: translateX(0);\n            }\n        }\n\n        .message.user {\n            background: rgba(255, 107, 107, 0.3);\n            text-align: right;\n        }\n\n        .message.ai {\n            background: rgba(78, 205, 196, 0.3);\n        }\n\n        .message.system {\n            background: rgba(69, 183, 209, 0.3);\n            text-align: center;\n            font-style: italic;\n        }\n\n        .chat-input {\n            display: flex;\n            gap: 1rem;\n        }\n\n        .chat-input input {\n            flex: 1;\n            padding: 1rem;\n            border: none;\n            border-radius: 25px;\n            background: rgba(255, 255, 255, 0.1);\n            color: white;\n            font-size: 1rem;\n            outline: none;\n        }\n\n        .chat-input input::placeholder {\n            color: rgba(255, 255, 255, 0.6);\n        }\n\n        .chat-input button {\n            padding: 1rem 2rem;\n            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);\n            color: white;\n            border: none;\n            border-radius: 25px;\n            cursor: pointer;\n            font-weight: bold;\n            transition: all 0.3s ease;\n        }\n\n        .chat-input button:hover {\n            transform: translateY(-2px);\n            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Рейтинговая система */\n        .rating-section {\n            margin-top: 2rem;\n        }\n\n        .idea-card {\n            background: rgba(255, 255, 255, 0.1);\n            backdrop-filter: blur(10px);\n            border-radius: 15px;\n            padding: 1.5rem;\n            margin-bottom: 1rem;\n            border: 1px solid rgba(255, 255, 255, 0.2);\n            transition: all 0.3s ease;\n        }\n\n        .idea-card:hover {\n            transform: translateY(-5px);\n            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);\n        }\n\n        .idea-header {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            margin-bottom: 1rem;\n        }\n\n        .rating-buttons {\n            display: flex;\n            gap: 0.5rem;\n        }\n\n        .rating-btn {\n            padding: 0.5rem 1rem;\n            border: none;\n            border-radius: 20px;\n            cursor: pointer;\n            font-weight: bold;\n            transition: all 0.3s ease;\n        }\n\n        .rating-btn.up {\n            background: rgba(76, 175, 80, 0.7);\n            color: white;\n        }\n\n        .rating-btn.down {\n            background: rgba(244, 67, 54, 0.7);\n            color: white;\n        }\n\n        .rating-btn:hover {\n            transform: scale(1.1);\n        }\n\n        .rating-score {\n            font-weight: bold;\n            font-size: 1.1rem;\n            color: #4ecdc4;\n        }
+
+    /* Адаптивность */\n        @media (max-width: 768px) {\n            .hero h1 {\n                font-size: 2.5rem;\n            }\n            \n            .hero p {\n                font-size: 1.1rem;\n            }\n            \n            .nav-links {\n                display: none;\n            }\n            \n            .features {\n                grid-template-columns: 1fr;\n            }
+    }
+
+    /* Эффекты прокрутки */
+    .fade-in {\n            opacity: 0;\n            transform: translateY(30px);\n            transition: all 0.6s ease;\n        }\n\n        .fade-in.visible {\n            opacity: 1;\n            transform: translateY(0);\n        }\n    </style>\n</head>\n<body>\n    <div class=\"bg-animation\"></div>\n    \n    <nav id=\"navbar\">\n        <div class=\"nav-container\">\n            <div class=\"logo\">SimbioNet Alex AIGemini</div>\n            <ul class=\"nav-links">
+            <li><a href="#home">Главная</a></li>\n                <li><a href="#about">О проекте</a></li>\n                <li><a href=\"#features">Возможности</a></li>
+            <li><a href="#chat">Чат</a></li>\n                <li><a href="#ideas">Идеи</a></li>\n            </ul>\n        </div>\n    </nav>\n\n    <section id=\"home\" class=\"hero\">\n        <div class=\"hero-content\">\n            <h1>SimbioNet Alex AIGemini</h1>
+        <p>Инновационная платформа симбиотического единства биосетей и нейросетей для решения актуальных проблем в социальной сфере и ИИ технологиях</p>
+        <a href="#chat" class="cta-button">Присоединиться к сообществу</a>
+    </div>\n    </section>\n\n    <section id=\"about\" class=\"section fade-in">
+    <h2 class="section-title">О проекте</h2>\n        <div class=\"features\">\n            <div class=\"feature-card\">\n                <div class</div>
+            <h3>Когнитивистика</h3>
+            <p>Прорывные подходы в изучении познавательных процессов и их применение в решении практических задач</p>
+        </div>\n            <div class=\"feature-card\">\n                <div class=\"feature-icon\">3>ИИ Технологии</h3>
+            <p>Интеграция новейших достижений в области искусственного интеллекта для социальных инноваций</p>
+        </div>
+        <div class=\"feature-card\">\n                <div class=\"feature-icon\">>Симбиоз</h3>\n                <p>Создание тесного взаимодействия между человеческим интеллектом и машинным обучением</p>
+        </div>\n        </div>\n    </section>\n\n    <section id=\"features\" class=\"section fade-in\">\n        <h2 class=\"section-title">Возможности платформы</h2>
+    <div class="features">
+        <div class=\"feature-card\">\n                <div class=\"feature-3>Генерация идей</h3>
+            <p>Совместная разработка инновационных решений с участием человека и ИИ</p>
+        </div>\n            <div class=\"feature-card\">\n                <div class=\"feature3>Формирование команд</h3>\n                <p>Объединение экспертов и исполнителей на основе рейтинга и компетенций</p>
+        </div>\n            <div class=\"feature-card\">\n                <div class=\"feature-icon\">>Игровая механика</h3>
+            <p>Реализация проектов через игровые элементы и альтернативные подходы</p>
+        </div>\n        </div>\n    </section>\n\n    <section id=\"chat\" class=\"section fade-in\">\n        <h2 class=\"section-title\">Интерактивный чат</h2>\n        <div class=\"chat-section\">\n            <div class=\"chat-container\">\n                <div class=\"chat-messages\" id=\"chatMessages\">\n                    <div class="message system">
+                    Добро пожаловать в SimbioNet! Здесь формируются команды для реализации инновационных проектов.\n                    </div>\n                    <div class=\"message ai">
+                    Привет! Я AI Gemini. Готов к симбиотическому взаимодействию для решения актуальных задач. Поделитесь своими идеями!
+                </div>\n                </div>\n                <div class=\"chat-input\">\n                    <input type=\"text\" id=\"messageInput" placeholder="Поделитесь своей идеей или предложением...">
+                <button onclick=\"sendMessage()\">Отправить</button>
+            </div>\n            </div>\n        </div>\n    </section>\n\n    <section id=\"ideas\" class=\"section fade-in">
+    <h2 class="section-title">Рейтинг идей</h2>
+    <div class=\"rating-section\">\n            <div class=\"idea-card\">\n                <div class=\"idea-header\">\n                    <h3>ИИ-система для анализа социальных проблем</h3>
+                <div class=\"rating-buttons\">\n                        <button class=\"rating-btn up\" onclick=\"r</button>\n                        <span class=\"rating-score\" id=\"score1\">+15</span>\n                        <button class=\"rating-btn down\" onclick=\"rateIdea(1,</button>\n                    </div>\n                </div>\n                <p>Разработка нейросетевой системы для выявления и прогнозирования социальных конфликтов с предложением решений</p>\n            </div>\n            \n            <div class=\"idea-card\">\n                <div class=\"idea-header\">\n                    <h3>Платформа коллективного решения проблем</h3>
+                <div class=\"rating-buttons\">\n                        <button class=\"rating-btn up\" onclick=\"rateIdea(2, '-score\" id=\"score2\">+8</span>\n                        <button class=\"rating-btn down\" onclick=\"rateIdea(2,\n                </div>\n                <p>Создание онлайн-платформы для формирования мультидисциплинарных команд экспертов</p>
+        </div>\n            \n            <div class=\"idea-card\">\n                <div class=\"idea-header\">\n                    <h3>Игровая экосистема для социальных инноваций</h3>
+                <div class=\"rating-buttons\">\n                        <button class=\"rating-btn up\" onclick=\"rateIdea(<span class=\"rating-score\" id=\"score3\">+12</span>\n                        <button class=\"rating-btn down\" onclick=\"r\n                    </div>\n                </div>\n                <p>Разработка игровой механики для мотивации участия в решении социальных проблем</p>\n            </div>\n        </div>\n    </section>
+
+<script>
+    // Плавная прокрутка для навигации
+    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {\n            anchor.addEventListener('click', function (e) {\n                e.preventDefault();\n                document.querySelector(this.getAttribute('href')).scrollIntoView({\n                    behavior: 'smooth'\n                });\n            });\n        });
+
+    // Эффект появления при прокрутке
+    const observerOptions = {\n            threshold: 0.1,\n            rootMargin: '0px 0px -50px 0px'\n        };\n\n        const observer = new IntersectionObserver((entries) => {\n            entries.forEach(entry => {\n                if (entry.isIntersecting) {\n                    entry.target.classList.add('visible');\n                }\n            });\n        }, observerOptions);\n\n        document.querySelectorAll('.fade-in').forEach(el => {\n            observer.observe(el);\n        });\n\n        // Изменение навигации при прокрутке
+    window.addEventListener('scroll', () => {\n            const navbar = document.getElementById('navbar');\n            if (window.scrollY > 100) {\n                navbar.classList.add('scrolled');\n            } else {\n                navbar.classList.remove('scrolled');\n            }
+    });
+
+    // Функционал чата
+    let messageCounter = 0;\n        const aiResponses = [
+        "Интересная идея! Какие практические шаги видите для реализации?",
+        "Это может стать основой для формирования экспертной группы.",
+        "Предлагаю создать игровую механику для этой задачи.",
+        "Эта проблема требует симбиотического подхода человека и ИИ.",
+        "Давайте структурируем это предложение для рейтингования."
+    ];
+
+    function sendMessage() {
+        const input = document.getElementById('messageInput');\n            const message = input.value.trim();\n            \n            if (message) {\n                const chatMessages = document.getElementById('chatMessages');
+            
+            // Добавляем сообщение пользователя
+            const userMessage = document.createElement('div');\n                userMessage.className = 'message user';\n                userMessage.textContent = message;\n                chatMessages.appendChild(userMessage);
+            
+            // Очищаем поле ввода\n                input.value = '';
+            
+            // Добавляем ответ ИИ через небольшую задержку
+            setTimeout(() => {\n                    const aiMessage = document.createElement('div');\n                    aiMessage.className = 'message ai';\n                    aiMessage.textContent = aiResponses[messageCounter % aiResponses.length];\n                    chatMessages.appendChild(aiMessage);\n                    messageCounter++;\n                    
+                // Прокрутка к последнему сообщению
+                chatMessages.scrollTop = chatMessages.scrollHeight;\n                }, 1000);
+            
+            // Прокрутка к последнему сообщению
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    }
+
+    // Отправка сообщения по Enter
+    document.getElementById('messageInput').addEventListener('keypress', function(e) {\n            if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // Система рейтингования
+    const ratings = {
+        1: 15,\n            2: 8,\n            3: 12\n        };\n\n        function rateIdea(ideaId, type) {\n            if (type === 'up') {\n                ratings[ideaId]++;\n            } else {\n                ratings[ideaId]--;\n            }\n            \n            document.getElementById('score' + ideaId).textContent = \n                (ratings[ideaId] > 0 ? '+' : '') + ratings[ideaId];
+        
+        // Анимация кнопки
+        const button = event.target;\n            button.style.transform = '
